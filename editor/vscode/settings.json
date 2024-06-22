@@ -1,3 +1,126 @@
 {
-  "_comment": "WIP"
+  "telemetry.telemetryLevel": "crash", // opt-out tememetry
+  "redhat.telemetry.enabled": false, // telemetry
+  "workbench.startupEditor": "none",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "editor.fontFamily": "Menlo",
+  "editor.fontSize": 14.5,
+  "editor.lineHeight": 1.2,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "explorer.sortOrder": "type",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "debug.inlineValues": "on",
+  "git.confirmSync": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "workbench.colorTheme": "One Dark Pro Monokai Darker",
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "indentRainbow.colors": [
+    "rgba(0, 0, 0, 0)", // base
+    "rgba(63, 55, 201,0.1)",
+    "rgba(63, 55, 201,0.15)",
+    "rgba(58, 12, 163,0.15)",
+    "rgba(86, 11, 173,0.15)",
+    "rgba(114, 9, 183, 0.15)",
+    "rgba(181, 23, 158,0.15)",
+    "rgba(247, 37, 133,0.15)"
+  ],
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown"
+  ],
+  "indentRainbow.colorOnWhiteSpaceOnly": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#f1fa8c",
+    "editorBracketHighlight.foreground2": "#8be9fd",
+    "editorBracketHighlight.foreground3": "#bd93f9",
+    "editorBracketHighlight.foreground4": "#50fa7b",
+    "editorBracketHighlight.foreground5": "#ffb86c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff5555"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.default.cppStandard": "gnu++20",
+  "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
+  "C_Cpp.refactoring.includeHeader": "never", // disable auto include
+  "C_Cpp.intelliSenseUpdateDelay": 800,
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_style": "Google", // follow google styleguide
+  "C_Cpp.intelliSenseEngineFallback": "enabled",
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "code-runner.enableAppInsights": false, // telemetry
+  "code-runner.customCommand": "",
+  "code-runner.ignoreSelection": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.preserveFocus": false,
+  "code-runner.saveFileBeforeRun": true, // necessary
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "c": "cd $dir && gcc -std=c99 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ -std=c++20 -Wall $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt", // `-std` 플래그 필수!
+    "python": "python3 -u",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "javascript": "node",
+    "typescript": "ts-node",
+    "swift": "swift",
+    "go": "go run",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "elixir": "mix run",
+    "lisp": "sbcl --script",
+    "clojure": "lein exec",
+    "scheme": "csi -script",
+    "ocaml": "ocaml",
+    "haskell": "runghc",
+    "php": "php",
+    "ruby": "ruby",
+    "csharp": "scriptcs",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "scala": "scala",
+    "dart": "dart",
+    "perl": "perl",
+    "perl6": "perl6",
+    "r": "Rscript",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "zig": "zig run",
+    "fsharp": "fsi",
+    "vbscript": "cscript //Nologo",
+    "coffeescript": "coffee",
+    "julia": "julia",
+    "crystal": "crystal",
+    "applescript": "osascript",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "racket": "racket",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run"
+  },
 }
