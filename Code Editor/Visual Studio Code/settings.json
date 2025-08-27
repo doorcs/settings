@@ -1,71 +1,44 @@
+// `Preferences: Open User Settings (JSON)` 실행 후 붙여넣기
 {
-  "telemetry.telemetryLevel": "crash", // opt-out tememetry
-  "redhat.telemetry.enabled": false, // telemetry
+  "telemetry.telemetryLevel": "crash",
+  "redhat.telemetry.enabled": false, // tememetry X
   "workbench.startupEditor": "none",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "editor.fontFamily": "Menlo",
-  "editor.fontSize": 14.5,
-  "editor.lineHeight": 1.2,
-  "editor.tabSize": 2,
-  "editor.minimap.enabled": false,
-  "explorer.sortOrder": "type",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "debug.inlineValues": "on",
-  "git.confirmSync": false,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false
-  },
-  "workbench.colorTheme": "One Dark Pro Monokai Darker",
+  "workbench.colorTheme": "Catppuccin Mocha", // 에디터 테마
+  "catppuccin.accentColor": "blue", // 강조 색상 변경
+  "catppuccin.italicComments": false,
+  "catppuccin.italicKeywords": false, // 이탤릭체 제거
   "workbench.iconTheme": "vscode-icons",
   "vsicons.dontShowNewVersionMessage": true,
-  "indentRainbow.colors": [
-    "rgba(0, 0, 0, 0)", // base
-    "rgba(63, 55, 201,0.1)",
-    "rgba(63, 55, 201,0.15)",
-    "rgba(58, 12, 163,0.15)",
-    "rgba(86, 11, 173,0.15)",
-    "rgba(114, 9, 183, 0.15)",
-    "rgba(181, 23, 158,0.15)",
-    "rgba(247, 37, 133,0.15)"
-  ],
-  "indentRainbow.ignoreErrorLanguages": [
-    "markdown"
-  ],
-  "indentRainbow.colorOnWhiteSpaceOnly": false,
+  "explorer.sortOrder": "type", // 폴더, 파일, 확장자별 정렬
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-  "workbench.colorCustomizations": {
-    "editorBracketHighlight.foreground1": "#f1fa8c",
-    "editorBracketHighlight.foreground2": "#8be9fd",
-    "editorBracketHighlight.foreground3": "#bd93f9",
-    "editorBracketHighlight.foreground4": "#50fa7b",
-    "editorBracketHighlight.foreground5": "#ffb86c",
-    "editorBracketHighlight.foreground6": "#abb2c0",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#ff5555"
-  },
-  "[c]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
-  },
-  "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
-  },
-  "C_Cpp.default.cStandard": "c99",
-  "C_Cpp.default.cppStandard": "gnu++20",
-  "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
-  "C_Cpp.refactoring.includeHeader": "never", // disable auto include
-  "C_Cpp.intelliSenseUpdateDelay": 800,
-  "C_Cpp.formatting": "clangFormat",
-  "C_Cpp.clang_format_style": "Google", // follow google styleguide
-  "C_Cpp.intelliSenseEngineFallback": "enabled",
-  "C_Cpp.clang_format_fallbackStyle": "Google",
-  "code-runner.enableAppInsights": false, // telemetry
+  "editor.fontFamily": "Menlo, D2Coding", // 한글 표시용 D2Coding fallback
+  "editor.fontSize": 14.5,
+  "editor.lineHeight": 1.2,
+  "editor.detectIndentation": true, // 파일의 indent 감지
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary", // 공백이 연속으로 두개 이상일 때만 렌더링 (한 칸 공백은 표시 X)
+  "editor.minimap.enabled": false, // 미니맵 X
+  "editor.autoIndentOnPaste": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications", // 버전 관리되는 파일에서만 save on format 적용
+  "editor.cursorBlinking": "solid", // 커서 깜빡임 X
+  "files.autoSave": "onWindowChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "debug.inlineValues": "on",
+  "git.confirmSync": false,
+  "code-runner.enableAppInsights": false, // telemetry X
   "code-runner.customCommand": "",
   "code-runner.ignoreSelection": true,
   "code-runner.runInTerminal": true,
   "code-runner.preserveFocus": false,
-  "code-runner.saveFileBeforeRun": true, // necessary
+  "code-runner.saveFileBeforeRun": true, // 이거 필수!!
   "code-runner.clearPreviousOutput": true,
   "code-runner.executorMap": {
     "c": "cd $dir && gcc -std=c99 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -123,4 +96,35 @@
     "sml": "cd $dir && sml $fileName",
     "mojo": "mojo run"
   },
+  // 언어별 설정
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[java]": {
+    "editor.tabSize": 4
+  },
+  "[kotlin]": {
+    "editor.tabSize": 4
+  },
+  "[python]": { // ruff 포매터 사용
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.default.cppStandard": "gnu++20",
+  "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
+  "C_Cpp.refactoring.includeHeader": "never", // disable auto include
+  "C_Cpp.intelliSenseUpdateDelay": 800,
+  "C_Cpp.clang_format_style": "Google", // Google Styleguide
+  "java.server.launchMode": "LightWeight",
+  "java.jdt.ls.androidSupport.enabled": "off",
 }

@@ -1,0 +1,109 @@
+// `Preferences: Open Keyboard Shortcuts (JSON)` 실행 후 붙여넣기
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.closeSidebar",
+    "when": "filesExplorerFocus"
+  }, // `Command + 1`로 Explorer 윈도우 토글
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "code-runner.run"
+  }, // `Control + R`로 Code Runner 익스텐션 실행 (Run Code)
+  {
+    "key": "escape",
+    "command": "search.action.clearSearchResults",
+    "when": "searchViewletFocus"
+  }, // `Command + Shift + F` 검색 콘솔에서 `ESC`를 통해 검색 창 입력 초기화
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "shift shift",
+    "command": "workbench.action.quickOpen"
+  }, // `Shift Shift`로 검색 창 열기
+  {
+    "key": "ctrl ctrl",
+    "command": "workbench.action.showCommands"
+  }, // `Control Control`로도 명령 창을 열 수 있도록 단축키 오버로딩 (기본값은 F1)
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup"
+  }, // `Control + Tab`이 브라우저처럼 동작하도록 변경 (다음 탭으로 이동)
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditorInGroup"
+  }, // `Control + Shift + Tab`이 브라우저처럼 동작하도록 변경 (이전 탭으로 이동)
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  }, // 기존 `Control + Tab` 기능을 `Command + E`로 이동 (최근 탭으로 이동)
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  }, // 기존 `Control + Shift + Tab` 기능을 `Command + Shift + E`로 이동 (최근 탭 역순으로 이동)
+  {
+    "key": "ctrl+[Backquote]",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  }, // 한글 키보드일 때도 터미널 토글 단축키가 동작할 수 있도록 단축키 오버로딩 (기본값은 Control + `)
+]
